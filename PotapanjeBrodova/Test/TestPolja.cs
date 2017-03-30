@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PotapanjeBrodoa;
+using PotapanjeBrodova;
 
 namespace Test
 {
     [TestClass]
-    public class TestPolje
+    public class TestPolja
     {
         [TestMethod]
         public void Polje_RedatIStupacJednakiSuArgumentimaKonstruktora()
