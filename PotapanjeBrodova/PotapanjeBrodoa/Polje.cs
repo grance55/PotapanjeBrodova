@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace PotapanjeBrodova
 {
@@ -20,6 +19,19 @@ namespace PotapanjeBrodova
         public bool Equals(Polje other)
         {
             return Redak == other.Redak && Stupac == other.Stupac;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return false;
+            if (obj.GetType() != GetType())
+                return false;
+            return Equals((Polje)obj);
+        }
+        public override int GetHashCode()
+        {
+            return Redak ^ Stupac >> 16;
         }
     }
 }
